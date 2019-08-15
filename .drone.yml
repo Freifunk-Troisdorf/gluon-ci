@@ -21,13 +21,12 @@ steps:
   commands:
   - cd gluon
   - make update
-  - make -j1 V=s GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch-$input_version
+  - make -j1 V=s 
   environment:
-    branch: stable
     input_hood: tdf
     input_version: v2018.2.2-1
     GLUON_SITEDIR: /drone/src/site
-
-volumes:
-- name: gluon
-  temp: {}
+    GLUON_BRANCH: stable
+    GLUON_TARGET: ar71xx-generic
+    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+    FORCE_UNSAFE_CONFIGURE: 1
