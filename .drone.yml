@@ -1,6 +1,9 @@
 kind: pipeline
 name: gluon-build
 
+clone:
+  recursive: true
+
 steps:
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
