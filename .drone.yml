@@ -30,7 +30,7 @@ steps:
     branch: stable
     input_hood: tdf
     input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/gluon/site
+    GLUON_SITEDIR: /drone/src/site
 
 volumes:
 - name: gluon
