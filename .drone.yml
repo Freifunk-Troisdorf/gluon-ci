@@ -8,10 +8,13 @@ steps:
 - name: submodules
   image: docker:git
   commands:
+  #- cd gluon
+  #- git pull
+  #- cd ../site
+  #- git pull
+  - ls -alh
   - cd gluon
-  - git pull
-  - cd ../site
-  - git pull
+  - git status
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
@@ -19,7 +22,7 @@ steps:
   - ls -al
   - cd site
   - ls -alh
- # - git checkout v2018.2.2-tdf
+ # - git checkout v2018.2-tdf
  # - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch_name-$input_version $gluon_options
   environment:
     GOOS: linux
