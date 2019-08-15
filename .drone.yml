@@ -8,15 +8,12 @@ steps:
 - name: submodules
   image: docker:git
   commands:
+  - git submodule update --recursive --init
   - ls -alh
   - cd gluon
-  - git pull origin v2018.2.2
   - ls -alh
   - cd ../site
-  - git pull origin v2018.2-tdf
-  - cd ..
   - ls -alh
-  - git status
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
