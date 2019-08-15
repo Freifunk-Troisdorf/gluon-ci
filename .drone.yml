@@ -18,11 +18,8 @@ steps:
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
-  volumes:
-  - name: gluon
-    path: /gluon
   commands:
-  - cd /gluon
+  - cd gluon
   - make update
   - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch-$input_version
   environment:
