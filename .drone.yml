@@ -8,14 +8,16 @@ steps:
 - name: submodules
   image: docker:git
   commands:
-  - git submodule update --recursive --init
+#- git submodule update --recursive --init
+  - ls
 
 - name: change site to tdf
   image: docker:git
   commands:
   - cd site
-  - git checkout v2018.2-tdf
+ # - git checkout v2018.2-tdf
   - mkdir fff
+  - whoami
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
@@ -23,6 +25,7 @@ steps:
   - name: gluon
     path: /gluon
   commands:
+  - whoami
   - cd /gluon
   - mkdir gdsgklösjd
   - ls /drone/src/gluon
