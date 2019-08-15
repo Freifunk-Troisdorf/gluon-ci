@@ -15,6 +15,7 @@ steps:
   commands:
   - cd site
   - git checkout v2018.2-tdf
+  - mkdir fff
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
