@@ -9,22 +9,19 @@ steps:
   image: docker:git
   commands:
   - git submodule update --recursive --init
-  - cd gluon
-  - git branch
-  - git checkout v2018.2.2
-  - cd ../site
-  - git branch
+
+- name: change site to tdf
+  image: docker:git
+  commands:
+  - cd site
   - git checkout v2018.2-tdf
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
   commands:
-  - ls -al
-  - cd site
-  - ls -alh
- # - git checkout v2018.2-tdf
- # - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch_name-$input_version $gluon_options
+  - cd gluon
+  - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch-$input_version GLUON_SITEDIR=../site
   environment:
-    GOOS: linux
-    GOARCH: amd64
-    CGO_ENABLED: 0
+    branch: stable
+    input_hood: tdf
+    input_version: v2018.2.2-1
