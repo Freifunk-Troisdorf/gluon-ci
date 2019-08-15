@@ -11,6 +11,7 @@ steps:
   - ls -alh
   - cd gluon
   - git pull origin v2018.2.2
+  - ls -alh
   - cd ../site
   - git pull origin v2018.2-tdf
   - cd ..
