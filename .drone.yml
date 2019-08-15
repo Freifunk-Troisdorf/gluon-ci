@@ -8,8 +8,10 @@ steps:
 - name: submodules
   image: docker:git
   commands:
-  - git submodule update --recursive --remote
-  - ls -alh
+  - cd gluon
+  - git pull
+  - cd ../site
+  - git pull
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
