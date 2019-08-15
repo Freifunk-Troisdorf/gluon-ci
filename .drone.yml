@@ -9,11 +9,12 @@ steps:
   image: docker:git
   commands:
   - git submodule update --recursive --init
-  - ls -alh
   - cd gluon
-  - ls -alh
+  - git branch
+  - git checkout v2018.2.2
   - cd ../site
-  - ls -alh
+  - git branch
+  - git checkout v2018.2-tdf
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
