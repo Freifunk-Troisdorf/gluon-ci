@@ -15,6 +15,7 @@ steps:
   commands:
   - ls -al
   - cd site
+  - ls -alh
  # - git checkout v2018.2.2-tdf
  # - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch_name-$input_version $gluon_options
   environment:
