@@ -10,9 +10,9 @@ steps:
   commands:
   - ls -alh
   - cd gluon
-  - git pull
+  - git pull origin v2018.2.2
   - cd ../site
-  - git pull
+  - git pull origin v2018.2-tdf
   - cd ..
   - ls -alh
   - git status

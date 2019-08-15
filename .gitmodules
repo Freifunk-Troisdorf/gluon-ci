@@ -1,8 +1,6 @@
 [submodule "gluon"]
 	path = gluon
 	url = https://github.com/freifunk-gluon/gluon.git
-	branch = master
 [submodule "site"]
 	path = site
 	url = https://github.com/Freifunk-Troisdorf/site.git
-	branch = v2018.2-tdf
