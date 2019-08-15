@@ -23,6 +23,7 @@ steps:
     path: /gluon
   commands:
   - cd /gluon
+  - mkdir gdsgklösjd
   - ls /drone/src/gluon
   - make update GLUON_RELEASE=$input_hood-$branch-$input_version -C /drone/src/gluon
   - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch-$input_version  /drone/src/gluon
