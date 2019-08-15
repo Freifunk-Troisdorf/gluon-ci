@@ -9,6 +9,7 @@ steps:
   image: docker:git
   commands:
   - git submodule update --recursive --remote
+  - ls -alh
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
