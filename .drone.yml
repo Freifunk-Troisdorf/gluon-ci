@@ -18,13 +18,18 @@ steps:
 
 - name: build-ar71xx-generic
   image: hoffmannhosting/gluon-builder
+  volumes:
+  - name: gluon
+    path: /drone/src/gluon
   commands:
   - cd gluon
-  - mkdir test
-  - mkdir openwrt
   - make update GLUON_SITEDIR=../site
   - make -j5 GLUON_BRANCH=$branch GLUON_TARGET=ar71xx-generic GLUON_RELEASE=$input_hood-$branch-$input_version GLUON_SITEDIR=../site
   environment:
     branch: stable
     input_hood: tdf
     input_version: v2018.2.2-1
+
+volumes:
+- name: gluon
+  temp: {}
