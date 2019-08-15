@@ -16,12 +16,17 @@ steps:
   - cd site
   - git checkout v2018.2-tdf
 
-- name: build-ar71xx-generic
+- name: make update
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
   - make update
-  - make -j1 V=s 
+
+- name: build-ar71xx-generic
+  image: hoffmannhosting/gluon-builder
+  commands:
+  - cd gluon
+  - make -j16
   environment:
     input_hood: tdf
     input_version: v2018.2.2-1
