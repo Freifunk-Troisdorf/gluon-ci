@@ -76,7 +76,7 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j16
+  - make -j1 V=s
   environment:
     input_hood: tdf
     input_version: v2018.2.2-1
