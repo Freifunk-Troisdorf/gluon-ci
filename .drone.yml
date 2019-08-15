@@ -8,12 +8,13 @@ steps:
 - name: submodules
   image: docker:git
   commands:
-  #- cd gluon
-  #- git pull
-  #- cd ../site
-  #- git pull
   - ls -alh
   - cd gluon
+  - git pull
+  - cd ../site
+  - git pull
+  - cd ..
+  - ls -alh
   - git status
 
 - name: build-ar71xx-generic
