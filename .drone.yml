@@ -156,20 +156,6 @@ steps:
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
     FORCE_UNSAFE_CONFIGURE: 1
 
-- name: build-ar71xx-mikrotik
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ar71xx-mikrotik
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
 - name: build-brcm2708-bcm2710
   image: hoffmannhosting/gluon-builder
   commands:
