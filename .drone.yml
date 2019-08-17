@@ -254,14 +254,6 @@ steps:
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
     FORCE_UNSAFE_CONFIGURE: 1
 
-- name: sign-firmware
-  image: hoffmannhosting/gluon-builder
-  secrets:
-     - source: sign_key_stefan
-       target: sign_key_1
-  commands:
-  - /drone/src/gluon/contrib/sign.sh ${sign_key_1} /drone/src/gluon/output/images/sysupgrade/stable.manifest
-
 - name: copy-firmware-to-update-server
   image: appleboy/drone-scp
   settings:
@@ -271,6 +263,17 @@ steps:
       from_secret: ssh-update
     strip_components: 4
     target: /tmp
+    source: /drone/src/gluon/output/*
+
+- name: copy-firmware-to-archive
+  image: appleboy/drone-scp
+  settings:
+    host: 93.241.53.127
+    user: fwupload
+    password:
+      from_secret: archive-pass
+    strip_components: 4
+    target: /volume1/ff_firmware_archiv/$date
     source: /drone/src/gluon/output/*
 
 - name: ssh-test
