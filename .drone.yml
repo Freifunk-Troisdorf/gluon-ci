@@ -249,6 +249,14 @@ steps:
 #    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
 #    FORCE_UNSAFE_CONFIGURE: 1
 
+- name: sign-firmware
+  image: hoffmannhosting/gluon-builder
+  secrets:
+     - source: sign_key_stefan
+       target: sign_key_1
+  commands:
+  - /drone/src/gluon/contrib/sign.sh ${sign_key_1} /drone/src/gluon/output/images/sysupgrade/stable.manifest
+
 - name: copy-firmware-to-update-server
   image: appleboy/drone-scp
   settings:
