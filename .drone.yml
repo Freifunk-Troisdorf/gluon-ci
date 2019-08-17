@@ -243,6 +243,7 @@ steps:
 - name: make manifest
   image: hoffmannhosting/gluon-builder
   commands:
+  - cd gluon
   - make manifest
   environment:
     GLUON_BRANCH: stable
