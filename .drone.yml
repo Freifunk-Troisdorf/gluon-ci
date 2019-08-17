@@ -252,4 +252,6 @@ steps:
     script:
       - echo hello
       - echo world
+      - cd /srv/fwuploads
       - ls
+      - echo hallo > /tmp/bla
