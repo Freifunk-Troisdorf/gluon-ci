@@ -246,7 +246,13 @@ steps:
   - cd gluon
   - make manifest
   environment:
+    input_hood: tdf
+    input_version: v2018.2.2-1
+    GLUON_SITEDIR: /drone/src/site
     GLUON_BRANCH: stable
+    GLUON_TARGET: ramips-rt305x
+    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+    FORCE_UNSAFE_CONFIGURE: 1GLUON_BRANCH: stable
 
 - name: sign-firmware
   image: hoffmannhosting/gluon-builder
