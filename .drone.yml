@@ -30,212 +30,226 @@ steps:
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
     FORCE_UNSAFE_CONFIGURE: 1
 
-- name: build-ar71xx-generic
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ar71xx-generic
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
+#- name: build-ar71xx-generic
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ar71xx-generic
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ar71xx-tiny
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ar71xx-tiny
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ar71xx-nand
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ar71xx-nand
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-brcm2708-bcm2708
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: brcm2708-bcm2708
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-brcm2708-bcm2709
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j1 V=s
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: brcm2708-bcm2709
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-mpc85xx-generic
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: mpc85xx-generic
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-x86-generic
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: x86-generic
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-x86-geode
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: x86-geode
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-x86-64
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: x86-64
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ipq40xx
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ipq40xx
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ramips-mt7620
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ramips-mt7620
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ramips-mt7621
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ramips-mt7621
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ramips-mt76x8
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ramips-mt76x8
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-ramips-rt305x
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ramips-rt305x
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
+#
+#- name: build-sunxi-cortexa7
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: sunxi-cortexa7
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
 
-- name: build-ar71xx-tiny
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ar71xx-tiny
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-ar71xx-nand
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ar71xx-nand
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-brcm2708-bcm2708
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: brcm2708-bcm2708
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-brcm2708-bcm2709
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j1 V=s
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: brcm2708-bcm2709
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-mpc85xx-generic
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: mpc85xx-generic
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-x86-generic
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: x86-generic
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-x86-geode
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: x86-geode
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-x86-64
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: x86-64
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-ipq40xx
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ipq40xx
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-ramips-mt7620
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ramips-mt7620
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-ramips-mt7621
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ramips-mt7621
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-ramips-mt76x8
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ramips-mt76x8
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-ramips-rt305x
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ramips-rt305x
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
-
-- name: build-sunxi-cortexa7
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: sunxi-cortexa7
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
+- name: ssh-test
+    image: appleboy/drone-ssh
+    settings:
+      host: 46.4.138.183
+      username: fwupload
+      key:
+        from_secret: ssh-update
+      port: 22
+      command_timeout: 2m
+      script:
+        - echo hello
+        - echo world
+        - ls
