@@ -249,6 +249,13 @@ steps:
 #    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
 #    FORCE_UNSAFE_CONFIGURE: 1
 
+- name: make manifest
+  image: hoffmannhosting/gluon-builder
+  commands:
+  - make manifest
+  environment:
+    GLUON_BRANCH: stable
+
 - name: sign-firmware
   image: hoffmannhosting/gluon-builder
   secrets:
@@ -264,6 +271,7 @@ steps:
     user: fwupload
     key:
       from_secret: ssh-update
+    strip_components: 4
     target: /tmp
     source: /drone/src/gluon/output/*
 
