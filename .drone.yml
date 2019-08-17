@@ -254,6 +254,19 @@ steps:
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
     FORCE_UNSAFE_CONFIGURE: 1
 
+- name: backup-old-firmware
+  image: appleboy/drone-ssh
+  settings:
+    host: 46.4.138.183
+    username: fwupload
+    key:
+      from_secret: ssh-update
+    port: 22
+    command_timeout: 120m
+    script:
+      - ./rsync-backup.sh
+ #     - rm -rf /srv/fwuploads/troisdorf/*
+
 - name: copy-firmware-to-update-server
   image: appleboy/drone-scp
   settings:
@@ -264,30 +277,3 @@ steps:
     strip_components: 4
     target: /tmp
     source: /drone/src/gluon/output/*
-
-- name: copy-firmware-to-archive
-  image: appleboy/drone-scp
-  settings:
-    host: 93.241.53.127
-    user: fwupload
-    password:
-      from_secret: archive-pass
-    strip_components: 4
-    target: /volume1/ff_firmware_archiv/$date
-    source: /drone/src/gluon/output/*
-
-- name: ssh-test
-  image: appleboy/drone-ssh
-  settings:
-    host: 46.4.138.183
-    username: fwupload
-    key:
-      from_secret: ssh-update
-    port: 22
-    command_timeout: 2m
-    script:
-      - echo hello
-      - echo world
-      - cd /srv/fwuploads
-      - ls
-      - echo hallo > /tmp/bla
