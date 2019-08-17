@@ -29,16 +29,7 @@ steps:
     GLUON_TARGET: ar71xx-generic
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
     FORCE_UNSAFE_CONFIGURE: 1
-- name: notify
-  image: plugins/matrix
-  settings:
-    homeserver: https://matrix.nils.zone
-    roomid: !ljtaqLVGZMLLDSbCpi:nils.zone
-    template: Hallo wie gehts?
-    username:
-      from_secret: matrix_username
-    password:
-      from_secret: matrix_password
+
 #- name: build-ar71xx-generic
 #  image: hoffmannhosting/gluon-builder
 #  commands:
