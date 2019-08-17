@@ -252,7 +252,7 @@ steps:
     GLUON_BRANCH: stable
     GLUON_TARGET: ramips-rt305x
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1GLUON_BRANCH: stable
+    FORCE_UNSAFE_CONFIGURE: 1
 
 - name: sign-firmware
   image: hoffmannhosting/gluon-builder
