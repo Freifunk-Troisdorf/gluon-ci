@@ -275,7 +275,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 4
-    target: /tmp
+    target: /srv/fwuploads/troisdorf/multisite/
     source: /drone/src/gluon/output/*
 
 - name: slack
