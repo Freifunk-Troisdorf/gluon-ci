@@ -262,6 +262,9 @@ steps:
     script:
       - ./rsync-backup-tdf.sh
       - rm -rf /srv/fwuploads/troisdorf/tdf/*
+      - mkdir /srv/fwuploads/troisdorf/tdf/stable
+      - mkdir /srv/fwuploads/troisdorf/tdf/beta
+      - mkdir /srv/fwuploads/troisdorf/tdf/experimental
 
 - name: upload stable
   image: appleboy/drone-scp
@@ -285,7 +288,7 @@ steps:
     target: /srv/fwuploads/troisdorf/tdf/beta
     source: /drone/src/gluon/output/beta/images/*
 
-  - name: upload experimental
+- name: upload experimental
   image: appleboy/drone-scp
   settings:
     host: 46.4.138.183
