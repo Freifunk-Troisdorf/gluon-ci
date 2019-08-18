@@ -10,11 +10,11 @@ steps:
   commands:
   - git submodule update --recursive --init
 
-- name: change site to tdf
+- name: change site to multidomain
   image: docker:git
   commands:
   - cd site
-  - git checkout v2018.2-tdf
+  - git checkout testing/v2018.2-multidomain
 
 - name: make update
   image: hoffmannhosting/gluon-builder
