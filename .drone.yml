@@ -295,7 +295,7 @@ steps:
     user: fwupload
     key:
       from_secret: ssh-update
-    strip_components: 4
+    strip_components: 6
     target: /srv/fwuploads/troisdorf/tdf/experimental
     source: /drone/src/gluon/output/experimental/images/*
 
