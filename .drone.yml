@@ -44,19 +44,19 @@ steps:
     GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
     FORCE_UNSAFE_CONFIGURE: 1
 
-- name: build-ar71xx-tiny
-  image: hoffmannhosting/gluon-builder
-  commands:
-  - cd gluon
-  - make -j16
-  environment:
-    input_hood: tdf
-    input_version: v2018.2.2-1
-    GLUON_SITEDIR: /drone/src/site
-    GLUON_BRANCH: stable
-    GLUON_TARGET: ar71xx-tiny
-    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
-    FORCE_UNSAFE_CONFIGURE: 1
+#- name: build-ar71xx-tiny
+#  image: hoffmannhosting/gluon-builder
+#  commands:
+#  - cd gluon
+#  - make -j16
+#  environment:
+#    input_hood: tdf
+#    input_version: v2018.2.2-1
+#    GLUON_SITEDIR: /drone/src/site
+#    GLUON_BRANCH: stable
+#    GLUON_TARGET: ar71xx-tiny
+#    GLUON_RELEASE: $input_hood-$GLUON_BRANCH-$input_version
+#    FORCE_UNSAFE_CONFIGURE: 1
 
 #- name: build-ar71xx-nand
 #  image: hoffmannhosting/gluon-builder
