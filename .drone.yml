@@ -20,7 +20,7 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make update 
+  - make V=sc update
   environment:
     input_hood: flu
     input_version: v2018.2.2-1
