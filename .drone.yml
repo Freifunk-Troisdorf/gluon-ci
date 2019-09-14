@@ -23,7 +23,7 @@ steps:
   - make update 
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -37,7 +37,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -51,7 +51,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-tiny
     FORCE_UNSAFE_CONFIGURE: 1
@@ -65,7 +65,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-nand
     FORCE_UNSAFE_CONFIGURE: 1
@@ -79,7 +79,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: brcm2708-bcm2708
     FORCE_UNSAFE_CONFIGURE: 1
@@ -93,7 +93,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: brcm2708-bcm2709
     FORCE_UNSAFE_CONFIGURE: 1
@@ -107,7 +107,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: mpc85xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -121,7 +121,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -135,7 +135,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-geode
     FORCE_UNSAFE_CONFIGURE: 1
@@ -149,7 +149,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-64
     FORCE_UNSAFE_CONFIGURE: 1
@@ -163,7 +163,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ipq40xx
     FORCE_UNSAFE_CONFIGURE: 1
@@ -177,7 +177,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt7620
     FORCE_UNSAFE_CONFIGURE: 1
@@ -191,7 +191,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt7621
     FORCE_UNSAFE_CONFIGURE: 1
@@ -205,7 +205,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt76x8
     FORCE_UNSAFE_CONFIGURE: 1
@@ -219,7 +219,7 @@ steps:
   - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimantal-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-rt305x
     FORCE_UNSAFE_CONFIGURE: 1
@@ -231,7 +231,7 @@ steps:
 #  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
 #  environment:
 #    input_hood: tdf
-#    input_version: v2018.2.2-1
+#    input_version: v2018.2.3
 #    GLUON_SITEDIR: /drone/src/site
 #    GLUON_TARGET: sunxi-cortexa7
 #    FORCE_UNSAFE_CONFIGURE: 1
@@ -245,7 +245,7 @@ steps:
   - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: tdf
-    input_version: v2018.2.2-1
+    input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-rt305x
     FORCE_UNSAFE_CONFIGURE: 1
