@@ -240,14 +240,13 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make manifest GLUON_BRANCH=stable GLUON_OUTPUTDIR=output/stable
-  - make manifest GLUON_BRANCH=beta GLUON_OUTPUTDIR=output/beta
-  - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental
+  - make manifest GLUON_BRANCH=stable GLUON_OUTPUTDIR=output/stable GLUON_RELEASE=$input_hood-stable-$input_version
+  - make manifest GLUON_BRANCH=beta GLUON_OUTPUTDIR=output/beta GLUON_RELEASE=$input_hood-beta-$input_version
+  - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental GLUON_RELEASE=$input_hood-experimental-$input_version
   environment:
     input_hood: inn
     input_version: v2018.2.3
     GLUON_SITEDIR: /drone/src/site
-    GLUON_TARGET: ramips-rt305x
     FORCE_UNSAFE_CONFIGURE: 1
 
 - name: backup-old-firmware
