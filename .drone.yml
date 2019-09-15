@@ -32,9 +32,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -46,9 +46,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -60,9 +60,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -74,9 +74,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -88,9 +88,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -102,9 +102,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -116,9 +116,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -130,9 +130,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -144,9 +144,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -158,9 +158,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -172,9 +172,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -186,9 +186,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -200,9 +200,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -214,9 +214,9 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-  - make -j5 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j5 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-experimental-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
     input_hood: inn
     input_version: v2018.2.3
@@ -228,7 +228,7 @@ steps:
 #  image: hoffmannhosting/gluon-builder
 #  commands:
 #  - cd gluon
-#  - make -j5 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
 #  environment:
 #    input_hood: inn
 #    input_version: v2018.2.3
@@ -242,7 +242,7 @@ steps:
   - cd gluon
   - make manifest GLUON_BRANCH=stable GLUON_OUTPUTDIR=output/stable GLUON_RELEASE=$input_hood-stable-$input_version
   - make manifest GLUON_BRANCH=beta GLUON_OUTPUTDIR=output/beta GLUON_RELEASE=$input_hood-beta-$input_version
-  - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental GLUON_RELEASE=$input_hood-experimental-$input_version
+  - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental GLUON_RELEASE=$input_hood-exp-$input_version
   environment:
     input_hood: inn
     input_version: v2018.2.3
