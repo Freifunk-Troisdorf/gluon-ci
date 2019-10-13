@@ -32,7 +32,7 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make -j1 V=s GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
   environment:
