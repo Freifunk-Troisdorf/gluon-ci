@@ -10,11 +10,11 @@ steps:
   commands:
   - git submodule update --recursive --init
 
-- name: change site to multi-inn
+- name: change site to multi-flu
   image: docker:git
   commands:
   - cd site
-  - git checkout v2019.1-inn-multi
+  - git checkout v2019.1-flu-multi
 
 - name: make update
   image: hoffmannhosting/gluon-builder
@@ -245,10 +245,10 @@ steps:
     command_timeout: 120m
     script:
       #- ./rsync-backup-inn.sh
-      - rm -rf /srv/fwuploads/troisdorf/inn/*
-      - mkdir /srv/fwuploads/troisdorf/inn/stable
-      - mkdir /srv/fwuploads/troisdorf/inn/beta
-      - mkdir /srv/fwuploads/troisdorf/inn/experimental
+      - rm -rf /srv/fwuploads/troisdorf/flu/*
+      - mkdir /srv/fwuploads/troisdorf/flu/stable
+      - mkdir /srv/fwuploads/troisdorf/flu/beta
+      - mkdir /srv/fwuploads/troisdorf/flu/experimental
 
 - name: upload stable
   image: appleboy/drone-scp
@@ -258,7 +258,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/inn/stable
+    target: /srv/fwuploads/troisdorf/flu/stable
     source: /drone/src/gluon/output/stable/images/*
 
 - name: upload beta
@@ -269,7 +269,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/inn/beta
+    target: /srv/fwuploads/troisdorf/flu/beta
     source: /drone/src/gluon/output/beta/images/*
 
 - name: upload experimental
@@ -280,7 +280,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/inn/experimental
+    target: /srv/fwuploads/troisdorf/flu/experimental
     source: /drone/src/gluon/output/experimental/images/*
 
 - name: slack
