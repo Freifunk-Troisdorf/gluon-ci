@@ -10,11 +10,11 @@ steps:
   commands:
   - git submodule update --recursive --init
 
-- name: change site to multi-tdf
+- name: change site to multi-inn
   image: docker:git
   commands:
   - cd site
-  - git checkout v2019.1-tdf-multi
+  - git checkout v2019.1-inn-multi
 
 - name: make update
   image: hoffmannhosting/gluon-builder
@@ -244,11 +244,11 @@ steps:
     port: 22
     command_timeout: 120m
     script:
-      #- ./rsync-backup-multi.sh
-      - rm -rf /srv/fwuploads/troisdorf/tdf/*
-      - mkdir /srv/fwuploads/troisdorf/tdf/stable
-      - mkdir /srv/fwuploads/troisdorf/tdf/beta
-      - mkdir /srv/fwuploads/troisdorf/tdf/experimental
+      #- ./rsync-backup-inn.sh
+      - rm -rf /srv/fwuploads/troisdorf/inn/*
+      - mkdir /srv/fwuploads/troisdorf/inn/stable
+      - mkdir /srv/fwuploads/troisdorf/inn/beta
+      - mkdir /srv/fwuploads/troisdorf/inn/experimental
 
 - name: upload stable
   image: appleboy/drone-scp
@@ -258,7 +258,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/tdf/stable
+    target: /srv/fwuploads/troisdorf/inn/stable
     source: /drone/src/gluon/output/stable/images/*
 
 - name: upload beta
@@ -269,7 +269,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/tdf/beta
+    target: /srv/fwuploads/troisdorf/inn/beta
     source: /drone/src/gluon/output/beta/images/*
 
 - name: upload experimental
@@ -280,7 +280,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/tdf/experimental
+    target: /srv/fwuploads/troisdorf/inn/experimental
     source: /drone/src/gluon/output/experimental/images/*
 
 - name: slack
