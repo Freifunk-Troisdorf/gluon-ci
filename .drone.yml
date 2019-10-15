@@ -10,11 +10,11 @@ steps:
   commands:
   - git submodule update --recursive --init
 
-- name: change site to multi
+- name: change site to multi-tdf
   image: docker:git
   commands:
   - cd site
-  - git checkout v2019.1-multi
+  - git checkout v2019.1-tdf-multi
 
 - name: make update
   image: hoffmannhosting/gluon-builder
@@ -22,7 +22,6 @@ steps:
   - cd gluon
   - make update 
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-generic
@@ -32,11 +31,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-generic
@@ -46,11 +44,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-tiny
@@ -60,11 +57,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-nand
@@ -74,11 +70,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: brcm2708-bcm2708
@@ -88,11 +83,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: brcm2708-bcm2709
@@ -102,11 +96,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: mpc85xx-generic
@@ -116,11 +109,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: mpc85xx-p1020
@@ -130,11 +122,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-generic
@@ -144,11 +135,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-geode
@@ -158,11 +148,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-64
@@ -172,11 +161,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ipq40xx
@@ -186,11 +174,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt7620
@@ -200,11 +187,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt7621
@@ -214,11 +200,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt76x8
@@ -228,11 +213,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-#  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_hood-stable-$input_version GLUON_OUTPUTDIR=output/stable
-#  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_hood-beta-$input_version GLUON_OUTPUTDIR=output/beta
-  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_hood-exp-$input_version GLUON_OUTPUTDIR=output/experimental
+  - make -j4 GLUON_BRANCH=stable GLUON_RELEASE=$input_version-stable GLUON_OUTPUTDIR=output/stable
+  - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
+  - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-rt305x
@@ -242,11 +226,10 @@ steps:
   image: hoffmannhosting/gluon-builder
   commands:
   - cd gluon
-  - make manifest GLUON_BRANCH=stable GLUON_OUTPUTDIR=output/stable GLUON_RELEASE=$input_hood-stable-$input_version
-  - make manifest GLUON_BRANCH=beta GLUON_OUTPUTDIR=output/beta GLUON_RELEASE=$input_hood-beta-$input_version
-  - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental GLUON_RELEASE=$input_hood-exp-$input_version
+  - make manifest GLUON_BRANCH=stable GLUON_OUTPUTDIR=output/stable GLUON_RELEASE=$input_version-stable
+  - make manifest GLUON_BRANCH=beta GLUON_OUTPUTDIR=output/beta GLUON_RELEASE=$input_version-beta
+  - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental GLUON_RELEASE=$input_version-exp
   environment:
-    input_hood: multi
     input_version: v2019.1
     GLUON_SITEDIR: /drone/src/site
     FORCE_UNSAFE_CONFIGURE: 1
@@ -262,32 +245,32 @@ steps:
     command_timeout: 120m
     script:
       #- ./rsync-backup-multi.sh
-      - rm -rf /srv/fwuploads/troisdorf/multi/*
-      - mkdir /srv/fwuploads/troisdorf/multi/stable
-      - mkdir /srv/fwuploads/troisdorf/multi/beta
-      - mkdir /srv/fwuploads/troisdorf/multi/experimental
+      - rm -rf /srv/fwuploads/troisdorf/tdf/*
+      - mkdir /srv/fwuploads/troisdorf/tdf/stable
+      - mkdir /srv/fwuploads/troisdorf/tdf/beta
+      - mkdir /srv/fwuploads/troisdorf/tdf/experimental
 
-#- name: upload stable
-#  image: appleboy/drone-scp
-#  settings:
-#    host: 46.4.138.183
-#    user: fwupload
-#    key:
-#      from_secret: ssh-update
-#    strip_components: 6
-#    target: /srv/fwuploads/troisdorf/multi/stable
-#    source: /drone/src/gluon/output/stable/images/*
-#
-#- name: upload beta
-#  image: appleboy/drone-scp
-#  settings:
-#    host: 46.4.138.183
-#    user: fwupload
-#    key:
-#      from_secret: ssh-update
-#    strip_components: 6
-#    target: /srv/fwuploads/troisdorf/multi/beta
-#    source: /drone/src/gluon/output/beta/images/*
+- name: upload stable
+  image: appleboy/drone-scp
+  settings:
+    host: 46.4.138.183
+    user: fwupload
+    key:
+      from_secret: ssh-update
+    strip_components: 6
+    target: /srv/fwuploads/troisdorf/tdf/stable
+    source: /drone/src/gluon/output/stable/images/*
+
+- name: upload beta
+  image: appleboy/drone-scp
+  settings:
+    host: 46.4.138.183
+    user: fwupload
+    key:
+      from_secret: ssh-update
+    strip_components: 6
+    target: /srv/fwuploads/troisdorf/tdf/beta
+    source: /drone/src/gluon/output/beta/images/*
 
 - name: upload experimental
   image: appleboy/drone-scp
@@ -297,7 +280,7 @@ steps:
     key:
       from_secret: ssh-update
     strip_components: 6
-    target: /srv/fwuploads/troisdorf/multi/experimental
+    target: /srv/fwuploads/troisdorf/tdf/experimental
     source: /drone/src/gluon/output/experimental/images/*
 
 - name: slack
