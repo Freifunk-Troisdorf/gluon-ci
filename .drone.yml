@@ -1,3 +1,6 @@
+global-variables:
+  input_version: &input_version v2020.1
+
 kind: pipeline
 name: gluon-build
 
@@ -22,7 +25,7 @@ steps:
   - cd gluon
   - make update 
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -35,7 +38,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ath79-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -48,7 +51,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -61,7 +64,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-tiny
     FORCE_UNSAFE_CONFIGURE: 1
@@ -74,7 +77,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ar71xx-nand
     FORCE_UNSAFE_CONFIGURE: 1
@@ -87,7 +90,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: brcm2708-bcm2708
     FORCE_UNSAFE_CONFIGURE: 1
@@ -100,7 +103,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: brcm2708-bcm2709
     FORCE_UNSAFE_CONFIGURE: 1
@@ -113,7 +116,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: mpc85xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -126,7 +129,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: mpc85xx-p1020
     FORCE_UNSAFE_CONFIGURE: 1
@@ -139,7 +142,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -152,7 +155,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-geode
     FORCE_UNSAFE_CONFIGURE: 1
@@ -165,7 +168,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: x86-64
     FORCE_UNSAFE_CONFIGURE: 1
@@ -178,7 +181,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ipq40xx-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -191,7 +194,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ipq806x-generic
     FORCE_UNSAFE_CONFIGURE: 1
@@ -204,7 +207,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt7620
     FORCE_UNSAFE_CONFIGURE: 1
@@ -217,7 +220,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt7621
     FORCE_UNSAFE_CONFIGURE: 1
@@ -230,7 +233,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-mt76x8
     FORCE_UNSAFE_CONFIGURE: 1
@@ -243,7 +246,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: ramips-rt305x
     FORCE_UNSAFE_CONFIGURE: 1
@@ -256,7 +259,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: lantiq-xway
     FORCE_UNSAFE_CONFIGURE: 1
@@ -269,7 +272,7 @@ steps:
   - make -j4 GLUON_BRANCH=beta GLUON_RELEASE=$input_version-beta GLUON_OUTPUTDIR=output/beta
   - make -j4 GLUON_BRANCH=experimental GLUON_RELEASE=$input_version-exp GLUON_OUTPUTDIR=output/experimental
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     GLUON_TARGET: lantiq-xrx200
     FORCE_UNSAFE_CONFIGURE: 1
@@ -282,7 +285,7 @@ steps:
   - make manifest GLUON_BRANCH=beta GLUON_OUTPUTDIR=output/beta GLUON_RELEASE=$input_version-beta
   - make manifest GLUON_BRANCH=experimental GLUON_OUTPUTDIR=output/experimental GLUON_RELEASE=$input_version-exp
   environment:
-    input_version: v2020.1
+    input_version: *input_version
     GLUON_SITEDIR: /drone/src/site
     FORCE_UNSAFE_CONFIGURE: 1
 
